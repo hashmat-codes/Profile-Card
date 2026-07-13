@@ -1,0 +1,222 @@
+/* Base Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Fixed: allows card to center vertically */
+    background-color: #f4f7fe;
+}
+
+/* Card Container */
+.profile-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+    max-width: 330px;
+    width: 100%;
+    background: #fff; 
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    position: relative;
+    z-index: 1; /* Establishes layer context for ::before banner */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Top Color Banner */
+.profile-card::before{
+    content: '';
+    position: absolute;
+    height: 36%;
+    width: 100%;
+    background: linear-gradient(135deg, #4070f4 0%, #2563eb 100%);
+    top: 0;
+    left: 0;
+    border-radius: 24px 24px 0 0;
+    z-index: -1;
+}
+
+/* Profile Image */
+.card-image .image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Fields */
+.text-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.name{
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.job{
+    font-size: 14px; /* Balanced font scale */
+    font-weight: 500;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+/* Social Icon Row */
+.media-button{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.media-button .link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    margin: 6px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.media-button .link:hover {
+    transform: translateY(-3px);
+}
+
+/* Buttons Area */
+.buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.button{
+    flex: 1;
+    padding: 10px 16px;
+    margin: 0 6px;
+    background: #4070f4;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(64, 112, 244, 0.2);
+}
+
+.button:hover{
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.button:active {
+    transform: scale(0.96);
+}
+
+/* Message Outline Button Styling */
+.button.outline {
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+    box-shadow: none;
+}
+
+.button.outline:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+}
+
+/* Subscribe Active State Style class added by JS */
+.button.subscribed {
+    background-color: #10b981 !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+/* Analytics Row */
+.analytics{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    width: 100%;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 18px;
+}
+
+.data{
+    display: flex;
+    align-items: center;
+    color: #475569;
+    padding: 0 12px;
+    border-right: 1px solid #e2e8f0;
+    flex: 1;
+    justify-content: center;
+}
+
+.data:last-child{
+    border-right: none;
+}
+
+.data i{
+    font-size: 16px;
+    margin-right: 6px;
+}
+
+.number {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* Interactive custom classes for JS utility triggers */
+.flex-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.flex-btn:hover {
+    color: #2563eb;
+}
+
+.liked-active {
+    color: #ef4444 !important;
+    animation: pop 0.3s ease-out;
+}
+
+.copied-active {
+    color: #10b981 !important;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}

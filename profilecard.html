@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="profilecard.css" />
+  <script src="profilecard.js"></script>
+ 
+</head>
+
+<body>
+  
+  <div class="profile-card">
+    
+    <div class="card-image">
+      <img src="./image/profile.jpeg" alt="Hashmat Profile" class="image"
+        onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=300&auto=format&fit=crop'" />
+    </div>
+    
+    <div class="text-data">
+      <span class="name">Hashmat Raza</span>
+      <span class="job">Front-end Developer</span>
+    </div>
+
+    <div class="media-button">
+      <a href="https://github.com/462hashmat-droid" target="_blank" style="background-color: #24292e" class="link">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/Hashmat Raza" target="_blank" style="background-color: #0077b5" class="link">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="https://instagram.com/hashmat_72" target="_blank" style="background-color: #e1306c" class="link">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://facebook.com/حشمت رضا" target="_blank" style="background-color: #4267b2" class="link">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+    </div>
+
+    <div class="buttons">
+      <button id="subscribe-btn" class="button">Subscribe</button>
+      <button id="message-btn" class="button outline">Message</button>
+    </div>
+
+    <div class="analytics">
+      
+      <button id="like-btn" class="data flex-btn">
+        <i id="like-icon" class="fa-regular fa-heart"></i>
+        <span id="like-count" class="number">4,000</span>
+      </button>
+
+      <div class="data">
+        <i class="fa-regular fa-comment"></i>
+        <span class="number">2k</span>
+      </div>
+
+      <button id="share-btn" class="data flex-btn">
+        <i id="share-icon" class="fa-solid fa-share"></i>
+        <span id="share-text" class="number">1k</span>
+      </button>
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>
