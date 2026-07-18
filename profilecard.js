@@ -1,5 +1,4 @@
- 
-    // --- 1. SUBSCRIBE BUTTON TOGGLE ---
+
     const subscribeBtn = document.getElementById('subscribe-btn');
     let isSubscribed = false;
 
@@ -14,7 +13,7 @@
       }
     });
 
-    // --- 2. LIKE COUNT INCREMENT & ANIMATION ---
+  
     const likeBtn = document.getElementById('like-btn');
     const likeIcon = document.getElementById('like-icon');
     const likeCount = document.getElementById('like-count');
@@ -25,17 +24,17 @@
       hasLiked = !hasLiked;
       if (hasLiked) {
         likes++;
-        // Switch to solid heart
+      
         likeIcon.className = 'fa-solid fa-heart liked-active';
       } else {
         likes--;
-        // Revert to outline heart
+      
         likeIcon.className = 'fa-regular fa-heart';
       }
       likeCount.textContent = likes.toLocaleString();
     });
 
-    // --- 3. COPY TO CLIPBOARD SHARE TOOL ---
+   
     const shareBtn = document.getElementById('share-btn');
     const shareIcon = document.getElementById('share-icon');
     const shareText = document.getElementById('share-text');
@@ -45,7 +44,7 @@
         shareText.textContent = "Copied!";
         shareIcon.className = "fa-solid fa-check copied-active";
         
-        // Reset after 1.5 seconds
+        
         setTimeout(() => {
           shareText.textContent = "1k";
           shareIcon.className = "fa-solid fa-share";
@@ -53,7 +52,7 @@
       });
     });
 
-    // --- 4. MESSAGE ACTION ---
+   
     document.getElementById('message-btn').addEventListener('click', () => {
       alert("Redirecting to Hashmat's mailbox: hashmat@example.com");
     });
